@@ -69,6 +69,13 @@ const osThreadAttr_t BlinkTask_attributes = {
   .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
+/* Definitions for PwmTask */
+osThreadId_t PwmTaskHandle;
+const osThreadAttr_t PwmTask_attributes = {
+  .name = "PwmTask",
+  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 128 * 4
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -85,8 +92,11 @@ static void MX_USART1_UART_Init(void);
 static void MX_TIM3_Init(void);
 void TouchGFX_Task(void *argument);
 void StartBlinkTask(void *argument);
+void StartPwmTask(void *argument);
 
 /* USER CODE BEGIN PFP */
+
+void setPWM(TIM_HandleTypeDef timer, uint32_t channel, uint16_t period, uint16_t pulse);
 
 /* USER CODE END PFP */
 
@@ -168,6 +178,9 @@ int main(void)
 
   /* creation of BlinkTask */
   BlinkTaskHandle = osThreadNew(StartBlinkTask, NULL, &BlinkTask_attributes);
+
+  /* creation of PwmTask */
+  PwmTaskHandle = osThreadNew(StartPwmTask, NULL, &PwmTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -568,6 +581,20 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void setPWM(TIM_HandleTypeDef timer, uint32_t channel, uint16_t period, uint16_t pulse)
+{
+	HAL_TIM_PWM_Stop(&timer, channel); // stop generation of pwm
+	TIM_OC_InitTypeDef sConfigOC;
+	timer.Init.Period = period; // set the period duration
+	HAL_TIM_PWM_Init(&timer); // reinititialise with new period value
+	sConfigOC.OCMode = TIM_OCMODE_PWM1;
+	sConfigOC.Pulse = pulse; // set the pulse duration
+	sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+	sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+	HAL_TIM_PWM_ConfigChannel(&timer, &sConfigOC, channel);
+	HAL_TIM_PWM_Start(&timer, channel); // start pwm generation
+}
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_TouchGFX_Task */
@@ -606,6 +633,28 @@ void StartBlinkTask(void *argument)
 	  osDelay(100);
   }
   /* USER CODE END StartBlinkTask */
+}
+
+/* USER CODE BEGIN Header_StartPwmTask */
+/**
+* @brief Function implementing the PwmTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartPwmTask */
+void StartPwmTask(void *argument)
+{
+  /* USER CODE BEGIN StartPwmTask */
+  /* Infinite loop */
+  for(;;)
+  {
+	  for(int i=0; i<256; i++)
+	  {
+		  setPWM(htim3, TIM_CHANNEL_1, 255, i);
+		  osDelay(10);
+	  }
+  }
+  /* USER CODE END StartPwmTask */
 }
 
 /* MPU Configuration */
