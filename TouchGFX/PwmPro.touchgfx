@@ -7,7 +7,7 @@
             "Type": "Image",
             "RelativeFilename": "background.png",
             "Alpha": 255,
-            "Name": "image1",
+            "Name": "Background",
             "X": 0,
             "Y": 0,
             "Width": 480,
@@ -21,7 +21,7 @@
           }
         ],
         "Interactions": [],
-        "Name": "Screen1",
+        "Name": "StartupScreen",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -33,7 +33,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "StartupScreen",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
