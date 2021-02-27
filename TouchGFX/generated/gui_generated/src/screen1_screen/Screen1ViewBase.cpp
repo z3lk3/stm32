@@ -14,12 +14,8 @@ Screen1ViewBase::Screen1ViewBase()
     image1.setXY(0, 0);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
 
-    button1.setXY(155, 106);
-    button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-
     add(__background);
     add(image1);
-    add(button1);
 }
 
 void Screen1ViewBase::setupScreen()
