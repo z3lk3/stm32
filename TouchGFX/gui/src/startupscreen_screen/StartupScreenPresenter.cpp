@@ -10,6 +10,7 @@ StartupScreenPresenter::StartupScreenPresenter(StartupScreenView& v)
 void StartupScreenPresenter::activate()
 {
 	model -> setScanPotVal(true);
+	view.ChangeUpdateInterval(false, false);//Disabling animation at startup
 }
 
 void StartupScreenPresenter::deactivate()
