@@ -11,7 +11,9 @@ public:
     virtual ~StartupScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-protected:
+    void setPotVal(int value);
+    protected:
+    int lastPotVal;
 };
 
 #endif // STARTUPSCREENVIEW_HPP

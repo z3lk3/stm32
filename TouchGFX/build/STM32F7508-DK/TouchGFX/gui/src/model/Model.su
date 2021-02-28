@@ -1,0 +1,4 @@
+Model.cpp:10:1:Model::Model()	0	static
+Model.cpp:15:6:void Model::tick()	0	static
+Model.cpp:26:5:int Model::getPotVal()	0	static
+Model.cpp:36:6:void Model::setScanPotVal(bool)	0	static

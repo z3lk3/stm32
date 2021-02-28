@@ -9,6 +9,11 @@
 #include <gui/startupscreen_screen/StartupScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/AnimatedImage.hpp>
+#include <touchgfx/mixins/Draggable.hpp>
 
 class StartupScreenViewBase : public touchgfx::View<StartupScreenPresenter>
 {
@@ -27,9 +32,18 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image Background;
+    touchgfx::CircleProgress circleProgress;
+    touchgfx::PainterRGB565Bitmap circleProgressPainter;
+    touchgfx::TextArea textArea;
+    touchgfx::Draggable< touchgfx::AnimatedImage > animatedImage1;
 
 private:
 
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 };
 
 #endif // STARTUPSCREENVIEWBASE_HPP

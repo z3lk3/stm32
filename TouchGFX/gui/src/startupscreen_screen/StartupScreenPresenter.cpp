@@ -9,10 +9,15 @@ StartupScreenPresenter::StartupScreenPresenter(StartupScreenView& v)
 
 void StartupScreenPresenter::activate()
 {
-
+	model -> setScanPotVal(true);
 }
 
 void StartupScreenPresenter::deactivate()
 {
 
+}
+
+void StartupScreenPresenter::newPotVal(int value)
+{
+    view.setPotVal(value);
 }

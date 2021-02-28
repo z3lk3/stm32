@@ -18,15 +18,106 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "CircleProgress",
+            "FileNameProgress": "__designer\\Blue_ProgressIndicators_fill_large_circle_indicator_fill_line_half.png",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "CenterX": 92,
+            "CenterY": 92,
+            "Radius": 82,
+            "LineWidth": 16,
+            "StartAngle": -90,
+            "EndAngle": 90,
+            "CapPrecision": "Triangle",
+            "Alpha": 255,
+            "Style": "Style12",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_large_circle_indicator_bg_line_half.png",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 0,
+            "IndicatorPositionHeight": 0,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 4095,
+            "ProgressRangeSteps": 4095,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 60,
+            "Name": "circleProgress",
+            "X": 148,
+            "Y": 89,
+            "Width": 184,
+            "Height": 94,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea",
+            "X": 194,
+            "Y": 202,
+            "Width": 93,
+            "Height": 25,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "AnimatedImage",
+            "FileNameFirst": "ani_01.png",
+            "FileNameLast": "ani_11.png",
+            "UpdateTicksInterval": 100,
+            "Alpha": 255,
+            "StartOnLoad": true,
+            "ReverseEnabled": false,
+            "LoopEnabled": true,
+            "AnimationEndedCallback": false,
+            "Name": "animatedImage1",
+            "X": 8,
+            "Y": 9,
+            "Width": 85,
+            "Height": 112,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": true,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [],
         "Name": "StartupScreen",
         "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        "CanvasBufferSize": 7200
       }
     ],
     "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      }
+    ],
     "Name": "STM32F7508-DK",
     "Resolution": {
       "Width": 480,

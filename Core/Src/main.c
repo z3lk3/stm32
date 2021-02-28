@@ -713,7 +713,10 @@ void StartPwmTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  setPWM(htim3, TIM_CHANNEL_1, 4095, GetPotVal());
+	  if(GetPotVal() >= 100)
+		  setPWM(htim3, TIM_CHANNEL_1, 4095, GetPotVal());
+	  else
+		  setPWM(htim3, TIM_CHANNEL_1, 4095, 0);
 	  osDelay(1);
   }
   /* USER CODE END StartPwmTask */

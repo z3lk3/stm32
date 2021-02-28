@@ -1,6 +1,6 @@
 #include <gui/startupscreen_screen/StartupScreenView.hpp>
 
-StartupScreenView::StartupScreenView()
+StartupScreenView::StartupScreenView() : lastPotVal(0)
 {
 
 }
@@ -13,4 +13,14 @@ void StartupScreenView::setupScreen()
 void StartupScreenView::tearDownScreen()
 {
     StartupScreenViewBase::tearDownScreen();
+}
+
+void StartupScreenView::setPotVal(int value)
+{
+	if (lastPotVal != value)
+	{
+		lastPotVal = value;
+		circleProgress.setValue(value);
+		circleProgress.invalidate();
+	}
 }

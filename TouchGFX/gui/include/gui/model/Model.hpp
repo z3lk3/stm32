@@ -14,8 +14,12 @@ public:
     }
 
     void tick();
+    void setScanPotVal(bool scanEnabled);
+    int getPotVal();
 protected:
     ModelListener* modelListener;
+    int tickCounter;
+    bool scanPotVal;
 };
 
 #endif // MODEL_HPP

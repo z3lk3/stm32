@@ -1,0 +1,9 @@
+main.c:672:13:TouchGFX_Task	8	static
+main.c:691:6:StartBlinkTask	8	static
+main.c:215:6:SystemClock_Config	224	static
+main.c:114:5:main	120	static
+main.c:637:10:GetPotVal	8	static
+main.c:649:6:setPWM	40	static
+main.c:710:6:StartPwmTask	72	static
+main.c:832:6:HAL_TIM_PeriodElapsedCallback	0	static
+main.c:849:6:Error_Handler	0	static
