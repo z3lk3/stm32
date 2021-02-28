@@ -36,7 +36,7 @@ protected:
     touchgfx::CircleProgress circleProgress;
     touchgfx::PainterRGB565Bitmap circleProgressPainter;
     touchgfx::TextArea textArea;
-    touchgfx::Draggable< touchgfx::AnimatedImage > animatedImage1;
+    touchgfx::Draggable< touchgfx::AnimatedImage > EngineAnimation;
     touchgfx::Slider slider;
 
 private:

@@ -510,6 +510,36 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_button_round_released.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_frame_0_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_0_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_frame_1_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_1_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_frame_2_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_2_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_frame_3_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_3_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_frame_4_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_4_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_frame_5_delay-0.1s.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_frame_5_delay-0.1s.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_hor_therm_bg.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_hor_therm_bg.cpp</locationURI>

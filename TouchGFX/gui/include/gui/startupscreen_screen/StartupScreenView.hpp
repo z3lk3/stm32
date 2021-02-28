@@ -12,8 +12,10 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void setPotVal(int value);
+    void ChangeUpdateInterval(int inervalValue,int sliderValue);
 protected:
     int lastPotVal;
+    bool animationState;
     touchgfx::Callback<StartupScreenView, const touchgfx::Slider&, int> sliderValueChangedCallback;
     void sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value);
 };

@@ -43,9 +43,11 @@ void Model::setScanPotVal(bool scanEnabled)
 
 void Model::SetPwmValue(int value)
 {
+#ifndef SIMULATOR
 	if(lastSliderVal != value)
 	{
 		lastSliderVal = value;
 		setPWMtim12(value);
 	}
+#endif /*SIMULATOR*/
 }

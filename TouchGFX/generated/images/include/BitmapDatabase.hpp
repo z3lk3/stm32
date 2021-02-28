@@ -27,12 +27,18 @@ const uint16_t BITMAP_BUTTON_LARGE_PRESSED_ID = 17;
 const uint16_t BITMAP_BUTTON_LARGE_RELEASED_ID = 18;
 const uint16_t BITMAP_BUTTON_ROUND_PRESSED_ID = 19;
 const uint16_t BITMAP_BUTTON_ROUND_RELEASED_ID = 20;
-const uint16_t BITMAP_HOR_THERM_BG_ID = 21;
-const uint16_t BITMAP_HOR_THERM_BG_SCALE_ID = 22;
-const uint16_t BITMAP_HOR_THERM_PROGRESS_ID = 23;
-const uint16_t BITMAP_LED_OFF_ID = 24;
-const uint16_t BITMAP_LED_ON_ID = 25;
-const uint16_t BITMAP_TOP_BAR_ID = 26;
+const uint16_t BITMAP_FRAME_0_DELAY_0_1S_ID = 21;
+const uint16_t BITMAP_FRAME_1_DELAY_0_1S_ID = 22;
+const uint16_t BITMAP_FRAME_2_DELAY_0_1S_ID = 23;
+const uint16_t BITMAP_FRAME_3_DELAY_0_1S_ID = 24;
+const uint16_t BITMAP_FRAME_4_DELAY_0_1S_ID = 25;
+const uint16_t BITMAP_FRAME_5_DELAY_0_1S_ID = 26;
+const uint16_t BITMAP_HOR_THERM_BG_ID = 27;
+const uint16_t BITMAP_HOR_THERM_BG_SCALE_ID = 28;
+const uint16_t BITMAP_HOR_THERM_PROGRESS_ID = 29;
+const uint16_t BITMAP_LED_OFF_ID = 30;
+const uint16_t BITMAP_LED_ON_ID = 31;
+const uint16_t BITMAP_TOP_BAR_ID = 32;
 
 namespace BitmapDatabase
 {

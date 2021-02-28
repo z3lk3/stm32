@@ -35,10 +35,10 @@ StartupScreenViewBase::StartupScreenViewBase()
     textArea.setLinespacing(0);
     textArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
-    animatedImage1.setXY(8, 9);
-    animatedImage1.setBitmaps(BITMAP_ANI_01_ID, BITMAP_ANI_11_ID);
-    animatedImage1.setUpdateTicksInterval(6);
-    animatedImage1.startAnimation(false, true, true);
+    EngineAnimation.setXY(0, -2);
+    EngineAnimation.setBitmaps(BITMAP_FRAME_0_DELAY_0_1S_ID, BITMAP_FRAME_5_DELAY_0_1S_ID);
+    EngineAnimation.setUpdateTicksInterval(1);
+    EngineAnimation.startAnimation(false, true, true);
 
     slider.setXY(412, 48);
     slider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_NOB_ID));
@@ -50,7 +50,7 @@ StartupScreenViewBase::StartupScreenViewBase()
     add(Background);
     add(circleProgress);
     add(textArea);
-    add(animatedImage1);
+    add(EngineAnimation);
     add(slider);
 }
 

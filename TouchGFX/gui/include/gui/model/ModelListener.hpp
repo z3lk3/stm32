@@ -14,7 +14,7 @@ public:
         model = m;
     }
     virtual void newPotVal(int value) {}
-    virtual void ChangePwmValue(int value) {}
+//    virtual void ChangePwmValue(int value) {}
 protected:
     Model* model;
 };

@@ -6,6 +6,9 @@
 
 using namespace touchgfx;
 
+long map(long x, long in_min, long in_max, long out_min, long out_max);
+int mapv2(int value);
+
 class StartupScreenView;
 
 class StartupScreenPresenter : public touchgfx::Presenter, public ModelListener
@@ -19,7 +22,8 @@ public:
      */
     virtual void activate();
     virtual void newPotVal(int value);
-    virtual void ChangePwmValue(int value);
+    void NewUpdateInterval(int value);
+    void ChangePwmValue(int value);
 
     /**
      * The deactivate function is called automatically when this screen is "switched out"
@@ -31,8 +35,11 @@ public:
 
 private:
     StartupScreenPresenter();
-
+    int sliderValue {0};
+    int sliderValueMap {0};
     StartupScreenView& view;
 };
+
+
 
 #endif // STARTUPSCREENPRESENTER_HPP
