@@ -15,7 +15,7 @@ Model::Model() : modelListener(0), tickCounter(0), scanPotVal(false)
 void Model::tick()
 {
 	tickCounter++;
-	if (((tickCounter % 10) == 0) && (scanPotVal))
+	if (((tickCounter % 20) == 0) && (scanPotVal))
 	{
 		if (modelListener != 0)
 	    {

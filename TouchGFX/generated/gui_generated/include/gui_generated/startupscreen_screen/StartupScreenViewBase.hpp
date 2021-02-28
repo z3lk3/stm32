@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/AnimatedImage.hpp>
+#include <touchgfx/containers/Slider.hpp>
 #include <touchgfx/mixins/Draggable.hpp>
 
 class StartupScreenViewBase : public touchgfx::View<StartupScreenPresenter>
@@ -36,6 +37,7 @@ protected:
     touchgfx::PainterRGB565Bitmap circleProgressPainter;
     touchgfx::TextArea textArea;
     touchgfx::Draggable< touchgfx::AnimatedImage > animatedImage1;
+    touchgfx::Slider slider;
 
 private:
 

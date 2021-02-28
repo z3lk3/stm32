@@ -40,11 +40,18 @@ StartupScreenViewBase::StartupScreenViewBase()
     animatedImage1.setUpdateTicksInterval(6);
     animatedImage1.startAnimation(false, true, true);
 
+    slider.setXY(412, 48);
+    slider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_NOB_ID));
+    slider.setupVerticalSlider(7, 3, 0, 0, 125);
+    slider.setValueRange(0, 4095);
+    slider.setValue(0);
+
     add(__background);
     add(Background);
     add(circleProgress);
     add(textArea);
     add(animatedImage1);
+    add(slider);
 }
 
 void StartupScreenViewBase::setupScreen()
