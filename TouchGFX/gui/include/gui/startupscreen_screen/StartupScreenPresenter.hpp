@@ -19,6 +19,8 @@ public:
      */
     virtual void activate();
     virtual void newPotVal(int value);
+    virtual void ChangePwmValue(int value);
+
     /**
      * The deactivate function is called automatically when this screen is "switched out"
      * (ie. made inactive). Teardown functionality can be placed here.

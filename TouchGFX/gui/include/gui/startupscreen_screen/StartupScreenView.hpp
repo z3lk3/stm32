@@ -12,8 +12,10 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void setPotVal(int value);
-    protected:
+protected:
     int lastPotVal;
+    touchgfx::Callback<StartupScreenView, const touchgfx::Slider&, int> sliderValueChangedCallback;
+    void sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value);
 };
 
 #endif // STARTUPSCREENVIEW_HPP

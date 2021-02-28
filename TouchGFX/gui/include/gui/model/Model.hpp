@@ -16,10 +16,12 @@ public:
     void tick();
     void setScanPotVal(bool scanEnabled);
     int getPotVal();
+    void SetPwmValue(int value);
 protected:
     ModelListener* modelListener;
     int tickCounter;
     bool scanPotVal;
+    int lastSliderVal;
 };
 
 #endif // MODEL_HPP

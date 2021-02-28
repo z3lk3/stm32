@@ -1,6 +1,6 @@
 #include <gui/startupscreen_screen/StartupScreenView.hpp>
 
-StartupScreenView::StartupScreenView() : lastPotVal(0)
+StartupScreenView::StartupScreenView() : lastPotVal(0), sliderValueChangedCallback(this, &StartupScreenView::sliderValueChangedCallbackHandler)
 {
 
 }
@@ -8,6 +8,7 @@ StartupScreenView::StartupScreenView() : lastPotVal(0)
 void StartupScreenView::setupScreen()
 {
     StartupScreenViewBase::setupScreen();
+    slider.setNewValueCallback(sliderValueChangedCallback);
 }
 
 void StartupScreenView::tearDownScreen()
@@ -23,4 +24,12 @@ void StartupScreenView::setPotVal(int value)
 		circleProgress.setValue(value);
 		circleProgress.invalidate();
 	}
+}
+
+void StartupScreenView::sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &slider)
+    {
+       presenter->ChangePwmValue(value);
+    }
 }

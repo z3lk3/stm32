@@ -1,13 +1,15 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
 #include <cstdint>
+#define TIM_CHANNEL_1 0x00000000U
 
 extern "C"
 {
-extern uint32_t GetPotVal(void);
+	extern uint32_t GetPotVal(void);
+	void setPWMtim12(int value);
 }
 
-Model::Model() : modelListener(0), tickCounter(0), scanPotVal(false)
+Model::Model() : modelListener(0), tickCounter(0), scanPotVal(false), lastSliderVal(0)
 {
 
 }
@@ -22,7 +24,6 @@ void Model::tick()
 			modelListener -> newPotVal(getPotVal());
 	    }
 	}
-
 }
 
 int Model::getPotVal()
@@ -38,4 +39,13 @@ int Model::getPotVal()
 void Model::setScanPotVal(bool scanEnabled)
 {
     scanPotVal = scanEnabled;
+}
+
+void Model::SetPwmValue(int value)
+{
+	if(lastSliderVal != value)
+	{
+		lastSliderVal = value;
+		setPWMtim12(value);
+	}
 }

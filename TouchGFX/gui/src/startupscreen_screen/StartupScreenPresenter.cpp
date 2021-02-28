@@ -21,3 +21,8 @@ void StartupScreenPresenter::newPotVal(int value)
 {
     view.setPotVal(value);
 }
+
+void StartupScreenPresenter::ChangePwmValue(int value)
+{
+	model -> SetPwmValue(value);
+}
